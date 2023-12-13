@@ -1,0 +1,164 @@
+//====================================================================================================
+.footer {
+	background: #1D1E22;
+	@include adaptiveValue("padding-top", 48, 40);
+	@include adaptiveValue("padding-bottom", 48, 30);
+	&__container {
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("row-gap", 48, 30);
+		max-width: rem(1440);
+		margin: 0 auto;
+	}
+
+	&__body {
+	}
+
+	&__bottom {
+	}
+}
+.body-footer {
+	display: grid;
+	grid-template-columns: rem(150) 1fr rem(495);
+	align-items: center;
+	gap: rem(30) rem(20);
+	@include adaptiveValue("margin-bottom", 48, 40);
+	@media (max-width: em(1140)) and (min-width:$mobile){
+		grid-template-columns: rem(150) 1fr;
+		&__sign-up {
+			grid-column: span 2;
+		}
+	}
+	@media (max-width:$mobile){
+		grid-template-columns: auto;
+	}
+	&__logo {
+		width: rem(150);
+		height: rem(57);
+		@media (max-width:$mobileSmall){
+			 justify-self: center; 
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__navigation {
+		@media (min-width:$mobile){
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: center;
+			row-gap: rem(20);
+			@media (min-width:em(1140)){
+				@include adaptiveValue("column-gap", 110, 25, 0, 1440, 1140);
+			}
+			@media (max-width: em(1140)){
+				@include adaptiveValue("column-gap", 110, 30, 1, 1140, 767.98);
+			}
+		}
+		@media (max-width:$mobile){
+			&>*:not(:last-child) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+
+	&__spollers {
+	}
+
+	&__sign-up {
+		max-width: rem(495);
+		background-color: $cyanColor;
+		border-radius: rem(30);
+		@include adaptiveValue("padding-top", 80, 60);
+		@include adaptiveValue("padding-bottom", 80, 60);
+		@include adaptiveValue("padding-left", 48, 20);
+		@include adaptiveValue("padding-right", 48, 20);
+	}
+
+	&__label {
+		font-family: 'MonumentExtended';
+		font-size: rem(24);
+		line-height: 1.2;
+		letter-spacing: 0.04em;
+		color: #1D1E22;
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	&__form {
+	}
+}
+.spollers {
+
+	&__item {
+	}
+
+	&__title {
+		font-family: 'MonumentExtended';
+		font-size: rem(18);
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+
+	&__body {
+	}
+
+	&__list {
+		&>*:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+
+	&__li {
+	}
+
+	&__link {
+		color: #DFE5F5;
+		line-height: 1.5;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				color: $cyanColor;
+			}
+		}
+	}
+}
+.bottom-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: rem(20);
+	flex-wrap: wrap;
+	@media (max-width: em(523)){
+		justify-content: center;
+	}
+	&__text {
+		color: #DFE5F5;
+		line-height: 1.8;
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: rem(10) rem(24);
+	}
+
+	&__item-social {
+		color: #818698;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				color: $cyanColor;
+			}
+		}
+		&::before{
+			font-size: rem(24);
+		}
+	}
+}
+//====================================================================================================

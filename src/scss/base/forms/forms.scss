@@ -1,0 +1,105 @@
+//<FORM>
+// Сніппет (HTML):
+.form {
+	width: 100%;
+	position: relative;
+	padding-bottom: rem(10);
+	border-bottom: rem(1) solid #3FC9B0;
+	&._form-error {
+		&::before{
+			width: 100%;
+		}
+	}
+	&._form-focus {
+		&::after{
+			width: 100%;
+		}
+	}
+	&::before,
+	&::after{
+		content:'';
+		width: 0;
+		height: rem(1);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transition: width 0.3s ease 0s;	
+	}
+	&::after{
+		background-color: #000;
+	}
+	&::before{
+		background-color: red;
+	}
+	&__row {
+	}
+	&__column {
+	}
+	&__line {
+	}
+	&__input {
+		width: 100%;
+		height: rem(37);
+		background: transparent;
+		outline: none;
+		padding-right: rem(50);
+		&::placeholder {
+			color:#1D1E22;
+		}
+	}
+	&__button {
+		padding: rem(7) rem(10);
+		position: absolute;
+		top: 0;
+		right: 0;
+		&::before{
+			color:#000;
+			font-size: rem(23);			
+		}
+	}
+	&__error {
+		position: absolute;
+		font-weight: 700;
+		color: red;
+		bottom: 0;
+		left: 0;
+		transform: translate(0, 150%);
+	}
+}
+//</FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";

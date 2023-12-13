@@ -1,0 +1,59 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-android:before {
+	content: "\e900";
+}
+._icon-apple:before {
+	content: "\e901";
+}
+._icon-arrow-read-mobile:before {
+	content: "\e902";
+}
+._icon-arrow-read-more:before {
+	content: "\e903";
+}
+._icon-arrow-slider:before {
+	content: "\e904";
+}
+._icon-ball:before {
+	content: "\e905";
+}
+._icon-facebook:before {
+	content: "\e906";
+}
+._icon-github:before {
+	content: "\e907";
+}
+._icon-insta:before {
+	content: "\e908";
+}
+._icon-linked:before {
+	content: "\e909";
+}
+._icon-telegram:before {
+	content: "\e90a";
+}
+._icon-tiktok:before {
+	content: "\e90b";
+}
+._icon-twitter:before {
+	content: "\e90c";
+}
+._icon-youtube:before {
+	content: "\e90d";
+}

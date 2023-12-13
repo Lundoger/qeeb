@@ -1,0 +1,8 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.title {
+	font-family: 'MonumentExtended';
+	font-size: rem(30);
+	line-height: math.div(36 , 30);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
